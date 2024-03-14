@@ -14,6 +14,7 @@
 		7FE40CC22BA2F5EF00209602 /* MoveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE40CC12BA2F5EF00209602 /* MoveAppTests.swift */; };
 		7FE40CCC2BA2F5EF00209602 /* MoveAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE40CCB2BA2F5EF00209602 /* MoveAppUITests.swift */; };
 		7FE40CCE2BA2F5EF00209602 /* MoveAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE40CCD2BA2F5EF00209602 /* MoveAppUITestsLaunchTests.swift */; };
+		7FE40CDB2BA2F6FD00209602 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE40CDA2BA2F6FD00209602 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		7FE40CC72BA2F5EF00209602 /* MoveAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoveAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE40CCB2BA2F5EF00209602 /* MoveAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAppUITests.swift; sourceTree = "<group>"; };
 		7FE40CCD2BA2F5EF00209602 /* MoveAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7FE40CDA2BA2F6FD00209602 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7FE40CDC2BA2F9E800209602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,12 @@
 		7FE40CAF2BA2F5E900209602 /* MoveApp */ = {
 			isa = PBXGroup;
 			children = (
+				7FE40CDC2BA2F9E800209602 /* Info.plist */,
 				7FE40CB02BA2F5E900209602 /* MoveAppApp.swift */,
 				7FE40CB22BA2F5E900209602 /* ContentView.swift */,
 				7FE40CB42BA2F5EE00209602 /* Assets.xcassets */,
 				7FE40CB62BA2F5EE00209602 /* Preview Content */,
+				7FE40CDA2BA2F6FD00209602 /* LocationManager.swift */,
 			);
 			path = MoveApp;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				7FE40CB32BA2F5E900209602 /* ContentView.swift in Sources */,
 				7FE40CB12BA2F5E900209602 /* MoveAppApp.swift in Sources */,
+				7FE40CDB2BA2F6FD00209602 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +431,9 @@
 				DEVELOPMENT_TEAM = PPGW64ZB2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "app wants to access your location ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "app wants to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +463,9 @@
 				DEVELOPMENT_TEAM = PPGW64ZB2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "app wants to access your location ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "app wants to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
