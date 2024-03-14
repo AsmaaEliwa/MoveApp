@@ -12,6 +12,7 @@ class LocationManager:NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var location: CLLocation?
     @Published var latitude:Double?
     @Published var longitude:Double?
+    @Published var address:String?
     override init(){
         super.init()
         self.locationManger.delegate = self
@@ -46,19 +47,19 @@ class LocationManager:NSObject, ObservableObject, CLLocationManagerDelegate{
            }
        }
        
-//       func reverseGeocodeLocation() {
-//           if let latitude = Double(latitude), let longitude = Double(longitude) {
-//               let location = CLLocation(latitude: latitude, longitude: longitude)
-//               geocoder.reverseGeocodeLocation(location) { placemarks, error in
-//                   if let error = error {
-//                       print("Reverse geocoding error: \(error.localizedDescription)")
-//                       return
-//                   }
-//                   if let placemark = placemarks?.first {
-//                       address = "\(placemark)"
-//                   }
-//               }
-//           }
+    func reverseGeocodeLocation() {
+//        if let latitude = Double(location?.coordinate.latitude ?? 0), let longitude = Double(location?.coordinate.longitude ?? 0) {
+        guard let location = self.location else { return  }
+               geocoder.reverseGeocodeLocation(location) { placemarks, error in
+                   if let error = error {
+                       print("Reverse geocoding error: \(error.localizedDescription)")
+                       return
+                   }
+                   if let placemark = placemarks?.first {
+                       self.address = "\(placemark)"
+                   }
+               }
+           }
 //       }
     
     

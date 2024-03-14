@@ -35,7 +35,12 @@ struct ContentView: View {
             if let myLongitude = locationManager.longitude{
                 Text("longitude: \(myLongitude)")
             }
+            if let myAddress = locationManager.address{
+                Text("address: \(myAddress)")
+            }
                      
+        }.onAppear(){
+            locationManager.reverseGeocodeLocation()
         }
         .padding()
     }
